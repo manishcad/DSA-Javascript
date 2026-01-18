@@ -12,4 +12,20 @@ function slove(arr){
     return max
 }
 
+function optimalWay(arr){
+    let max=0
+    let buy=0
+    let sell=1
+    while(sell<arr.length){
+        if(arr[sell]<arr[buy]){
+            buy=sell
+        }
+        let profit=arr[sell]-arr[buy]
+        max=Math.max(max,profit)
+        sell+=1
+    }
+    return max
+}
+
 console.log(slove(prices))
+console.log(optimalWay(prices))
