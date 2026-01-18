@@ -25,7 +25,7 @@ function optimalWay(grid){
     let count=0
     while(row<m && col >=0 ){
         if(grid[row][col]<0){
-            count+=1
+            count+= (m-row)
             col-=1
         }
         else{
